@@ -1,0 +1,25 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title">Add/Edit</h4>
+</div>
+<div class="modal-body">
+    <form [formGroup]="editForm" (ngSubmit)="onSave()">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Enter title" formControlName="title">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" placeholder="Enter description" rows="5" formControlName="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="isCompleted">Is Completed</label>
+            <input type="checkbox" class="form-control" id="isCompleted" formControlName="isCompleted">
+        </div>
+
+
+        <hr>
+
+        <button class="btn btn-primary" type="submit" [disabled]="editForm.invalid">Save</button>
+    </form>
+</div>

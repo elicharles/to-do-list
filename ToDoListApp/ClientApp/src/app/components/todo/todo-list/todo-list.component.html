@@ -1,0 +1,23 @@
+﻿<h1 class="display-4 my-3">To-Do List</h1>
+
+<button class="btn btn-primary my-2" (click)="onAdd()">Add new</button>
+
+<div class="row row-equal-height">
+    <div class="col-xl-4 col-md-6 col-sm-12 mb-4" *ngFor="let taskItem of taskItems ; let i = index">
+        <div class="card">
+            <div class="card-header">
+                {{ taskItem.title }}
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ taskItem.description }}</p>
+                <input type="checkbox" [(ngModel)]="taskItem.isCompleted" (click)="setComplete(taskItem.id)" id="{{i}}" disabled>Completed
+                <button class="btn btn-primary" (click)="onEdit(taskItem.id)">Edit</button>
+                <button class="btn btn-danger ml-2" (click)="onDelete(taskItem.id)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="taskItems.length === 0" class="alert alert-info">
+    You haven't added any todo items yet.
+</div>
