@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
-import { CounterComponent } from './components/counter/counter.component';
-import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
 import { TodoListComponent } from './components/todo/todo-list/todo-list.component';
 import { TodoListService } from './services/todolist.service';
 import { TodoUpdateComponent } from './components/todo/todo-update/todo-update.component';
@@ -21,8 +19,6 @@ import { ErrorComponent } from './components/error/error.component';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     TodoListComponent,
     TodoUpdateComponent,
     ErrorComponent
@@ -35,8 +31,6 @@ import { ErrorComponent } from './components/error/error.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
       { path: 'todo', component: TodoListComponent },
     ])
   ],
