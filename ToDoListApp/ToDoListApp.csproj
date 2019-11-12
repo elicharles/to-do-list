@@ -32,6 +32,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20191104235916_InitialCreate2.cs" />
+    <Compile Remove="Migrations\20191104235916_InitialCreate2.Designer.cs" />
+    <Compile Remove="Migrations\20191112105906_InitialCreate.cs" />
+    <Compile Remove="Migrations\20191112105906_InitialCreate.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="ClientApp\src\app\components\error\error.component.spec.ts" />
     <None Remove="ClientApp\src\app\components\error\error.component.ts" />
     <None Remove="ClientApp\src\app\components\todo\todo-list\todo-list.component.ts" />
